@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FistBump – Book it. Play it. FistBump it.</title>
+<style>
+:root{--bg:#fbfbf4;--surface:#fff;--ink:#1d2108;--muted:#5a6140;--brand:#a8b82a;--brand-ink:#1d2108;--deep:#3d4a0c;--line:#e3e6cf;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12150a;--surface:#1b1f10;--ink:#f1f4de;--muted:#aab08c;--deep:#c6d44a;--line:#2d3320}}
+:root[data-theme="dark"]{--bg:#12150a;--surface:#1b1f10;--ink:#f1f4de;--muted:#aab08c;--deep:#c6d44a;--line:#2d3320}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.5px;display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none}
+.logo i{width:28px;height:28px;border-radius:50%;background:var(--brand);display:inline-block;position:relative}
+.logo i::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--bg)}
+nav a.btn{padding:8px 16px;font-size:14px}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);font-weight:700;padding:14px 26px;border-radius:999px;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:2px solid var(--brand);color:var(--ink)}
+.hero{padding:56px 0 72px;text-align:center}
+.pill{display:inline-block;background:var(--brand);color:var(--brand-ink);font-weight:700;font-size:13px;padding:5px 14px;border-radius:999px;margin-bottom:20px}
+h1{font-size:clamp(40px,8vw,76px);line-height:1.05;letter-spacing:-2px;margin:0 0 20px}
+h1 span{color:var(--deep)}
+.lead{max-width:640px;margin:0 auto 30px;color:var(--muted);font-size:18px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+section{padding:64px 0}
+h2{font-size:clamp(28px,5vw,42px);letter-spacing:-1px;line-height:1.15;margin:0 0 12px}
+.sub{color:var(--muted);max-width:620px;margin:0 0 36px}
+.band{background:var(--brand);color:var(--brand-ink)}
+.band .sub{color:#3b4210}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card h3{margin:12px 0 6px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-weight:800;font-size:18px}
+.stat{font-size:48px;font-weight:800;letter-spacing:-2px;line-height:1}
+.band .card{background:#ffffff26;border-color:#0000001a;color:var(--brand-ink)}
+.band .card p{color:#2c3309}
+.src{font-size:12px;opacity:.75;margin-top:24px}
+.price{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));align-items:stretch}
+.price .card.hl{border:3px solid var(--brand);position:relative}
+.amt{font-size:40px;font-weight:800;letter-spacing:-1px;margin:6px 0}
+.amt small{font-size:15px;font-weight:500;color:var(--muted)}
+.price ul{padding-left:18px;margin:12px 0 0;color:var(--muted);font-size:15px}
+.two{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center}
+.phone{max-width:260px;margin:0 auto;border:8px solid var(--ink);border-radius:36px;padding:18px 14px;background:var(--surface)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;background:var(--bg);margin-bottom:8px;font-size:14px}
+.row b{font-size:14px}
+.tag{background:var(--brand);color:var(--brand-ink);font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.ev li{margin-bottom:8px}
+.team{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.team .card{padding:18px}
+.team h3{font-size:16px;margin:0}
+.team p{font-size:13px}
+.final{text-align:center;padding:72px 0}
+footer{padding:28px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+@media (max-width:520px){nav a:not(.logo){display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#top"><i></i>FistBump</a>
+    <a class="btn" href="#join">Get the app</a>
+  </nav>
+  <header class="hero" id="top">
+    <h1>Book it. Play it.<br><span>FistBump it.</span></h1>
+    <p class="lead">FistBump is a multipurpose app that brings people together through sport. It enables individuals to book group activities easily, share their experience and meet friends old and new, in a community that is open to everyone.</p>
+    <div class="cta"><a class="btn" href="#join">Get FistBump</a><a class="btn ghost" href="#how">See how it works</a></div>
+  </header>
+</div>
+
+<section class="band" id="problem">
+  <div class="wrap">
+    <h2>Getting active shouldn’t be this hard</h2>
+    <p class="sub">With FistBump we have eradicated scattered group chats and awkward moments which put people off, to make getting active easy.</p>
+    <div class="grid">
+      <div class="card"><div class="stat">20%</div><p>of adults have been put off a sport because it was too hard to find or book online.</p></div>
+      <div class="card"><div class="stat">39%</div><p>more Gen Z than Gen X use fitness to meet people who share their interest.</p></div>
+      <div class="card"><div class="stat">17%</div><p>of women report “gymtimidation”, 12% of people overall.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2 style="margin-bottom:28px">Everything you need to get active and connected</h2>
+    <div class="grid">
+      <div class="card"><div class="ico">1</div><h3>Find a game</h3><p>Browse different local games and classes, and easily find a new sport to try.</p></div>
+      <div class="card"><div class="ico">2</div><h3>Book in seconds</h3><p>See availability and peak times for every venue and sport, without signing up to a dozen platforms.</p></div>
+      <div class="card"><div class="ico">3</div><h3>Split the cost</h3><p>Only pay your share.</p></div>
+      <div class="card"><div class="ico">4</div><h3>Meet your people</h3><p>Skill-based matching and a review system pair you with teammates who suit your level and personality.</p></div>
+      <div class="card"><div class="ico">5</div><h3>Track and share</h3><p>Easy to follow your progress and celebrate hitting milestones.</p></div>
+      <div class="card"><div class="ico">6</div><h3>Play safely</h3><p>Verified business profiles and reviews help you trust who you play with and where you play.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2>Never short of a player again</h2>
+      <p class="sub" style="margin-bottom:0">Whether you’re a complete beginner or a player who needs a team, FistBump removes the hard steps to get in, or back into, the sport you love. Just show up and have fun!</p>
+    </div>
+    <div class="phone" aria-label="Illustration of the FistBump app">
+      <div class="row"><span><b>5-a-side</b><br>Tonight, 7pm</span><span class="tag">2 spots</span></div>
+      <div class="row"><span><b>Beginner padel</b><br>Sat, 10am</span><span class="tag">Open</span></div>
+      <div class="row"><span><b>Park run club</b><br>Sun, 9am</span><span class="tag">6 going</span></div>
+      <div class="row"><span><b>Your share</b></span><b>£4.50</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Simple, fair pricing</h2>
+    <p class="sub">One fixed fee for every sport and every purpose. No booking fees each time you play.</p>
+    <div class="price">
+      <div class="card hl" style="background:var(--surface);color:var(--ink)"><span class="tag">FistBump</span><div class="amt">£5<small> / month</small></div><p style="color:var(--muted)">All sports, one subscription.</p><ul><li>Book across venues</li><li>Community and matchmaking</li><li>Progress tracking</li></ul></div>
+      <div class="card"><b>Strava</b><div class="amt">£8.99<small> / month</small></div><p>Great for tracking, less focused on group booking.</p></div>
+      <div class="card"><b>Playtomic</b><div class="amt">3%<small> per booking</small></div><p>A booking fee each time you play, mainly for racket sports.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="business">
+  <div class="wrap two">
+    <div>
+      <h2>Run a club, class or venue?</h2>
+      <p class="sub" style="margin-bottom:0">List your sessions on FistBump and reach new customers who are ready to book. You don’t need to build or manage your own booking system, and verified profiles and reviews help people trust you.</p>
+    </div>
+    <ul class="ev" style="margin:0;padding-left:20px;color:var(--muted)">
+      <li>A platform to advertise and take bookings</li>
+      <li>Taster sessions to reach nervous first-timers</li>
+      <li>Charities can host free sessions and groups</li>
+      <li>Fill courts and teams with less effort</li>
+    </ul>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Join the team</h2>
+    <p class="sub">A small, friendly start-up where teamwork drives everything. We offer training, clear progression, flexible working, gym membership and competitive pay and pensions.</p>
+    <div class="team">
+      <div class="card"><h3>Finance</h3><p>Charlie Lyle, ACA accountant</p></div>
+      <div class="card"><h3>IT</h3><p>Andy Christer, 30+ years in information management</p></div>
+      <div class="card"><h3>Customer service</h3><p>Henry Christer</p></div>
+      <div class="card"><h3>Marketing</h3><p>Ben Gibson</p></div>
+      <div class="card"><h3>Legal</h3><p>Sam Linscott and Julia Surowiec</p></div>
+      <div class="card"><h3>Operations</h3><p>Matthew Chamberlain</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band final" id="join">
+  <div class="wrap">
+    <h2>Ready to FistBump?</h2>
+    <p class="sub" style="margin:0 auto 28px">Join a community which makes it easy to play the sport you have always wanted to play.</p>
+    <a class="btn" style="background:var(--brand-ink);color:#f1f4de" href="#top">Download on the App Store and Google Play</a>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 FistBump. Book it. Play it. FistBump it.</div></footer>
+</body>
+</html>
